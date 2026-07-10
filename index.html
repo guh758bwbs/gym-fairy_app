@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muscle App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <img src="img/gym-fairy-logo.png" alt="GYM FAIRY" class="app-logo">
+    <h1 class="app-title">GYM FAIRY</h1>
+  </header>
+
+  <div id="auth-container">
+    <h2>新規登録 / ログイン</h2>
+    <input type="email" id="email-input" placeholder="メールアドレス">
+    <input type="password" id="password-input" placeholder="パスワード（6文字以上）">
+    <button id="signup-btn">新規登録</button>
+    <button id="login-btn">ログイン</button>
+    <p id="auth-message"></p>
+  </div>
+
+  <div id="app-container" style="display: none;">
+    <p>ようこそ、<span id="user-email"></span>さん</p>
+    <button id="logout-btn">ログアウト</button>
+    <!-- ここに今後プロフィール登録画面やマッチング画面を追加していきます -->
+    <div id="app-container" style="display: none;">
+    </div>
+    <!-- <p>ようこそ、<span id="user-email"></span>さん</p> -->
+    <!-- <button id="logout-btn">ログアウト</button> -->
+  
+    <hr>
+  
+    <h2>種目の設定</h2>
+    <div id="skill-form">
+      <select id="exercise-select">
+        <option value="ベンチプレス">ベンチプレス</option>
+        <option value="スクワット">スクワット</option>
+        <option value="デッドリフト">デッドリフト</option>
+        <option value="懸垂">懸垂</option>
+        <option value="栄養管理">栄養管理</option>
+      </select>
+  
+      <select id="preference-select">
+        <option value="teach">教えたい</option>
+        <option value="learn">教えて欲しい</option>
+      </select>
+  
+      <select id="level-select">
+        <option value="初級">初級</option>
+        <option value="中級">中級</option>
+        <option value="上級">上級</option>
+      </select>
+  
+      <button id="add-skill-btn">追加する</button>
+    </div>
+  
+    <h3>登録済みの種目</h3>
+    <ul id="skill-list"></ul>
+
+    <hr>
+
+    <h2>マッチング相手を探す</h2>
+    <select id="search-exercise-select">
+      <option value="ベンチプレス">ベンチプレス</option>
+      <option value="スクワット">スクワット</option>
+      <option value="デッドリフト">デッドリフト</option>
+      <option value="懸垂">懸垂</option>
+      <option value="栄養管理">栄養管理</option>
+    </select>
+    <button id="search-teacher-btn">この種目を教えてくれる人を探す</button>
+    
+    <ul id="match-results"></ul>
+
+    <hr>
+
+    <h2>届いているマッチ申請</h2>
+    <ul id="incoming-requests"></ul>
+    
+    <h2>自分が送った申請</h2>
+    <ul id="outgoing-requests"></ul>
+  </div>
+  
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
