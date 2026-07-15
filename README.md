@@ -11,7 +11,7 @@
 
 <!-- ここにスクショを貼ってください（例） -->
 <!-- ![ログイン画面](./img/screenshot-login.png) -->
-./img/login_ss.png
+<img width="728" height="276" alt="login_ss" src="https://github.com/user-attachments/assets/cea2a327-0322-4229-a54e-c0506c629117" />
 ---
 
 ## ✨ 主な機能
