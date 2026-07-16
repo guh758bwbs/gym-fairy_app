@@ -424,6 +424,18 @@ function openChat(matchId, partnerEmail) {
       textEl.textContent = msg.text;
       li.appendChild(textEl);
 
+      if (isMine) {
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "削除";
+        deleteBtn.className = "chat-delete-btn";
+        deleteBtn.addEventListener("click", async () => {
+          if (confirm("このメッセージを削除しますか？")) {
+            await deleteDoc(doc(db, "matches", currentChatMatchId, "messages", docSnap.id));
+          }
+        });
+        li.appendChild(deleteBtn);
+      }
+
       chatMessages.appendChild(li);
       lastSender = msg.sender_uid;
     });
